@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pollution Monitoring System</title>
+</head>
+<body>
+    <h1>Smart City Pollution Monitoring</h1>
+    <form action="/predict" method="post">
+        PM2.5: <input type="text" name="PM2.5" required><br><br>
+        PM10: <input type="text" name="PM10" required><br><br>
+        NO2: <input type="text" name="NO2" required><br><br>
+        CO: <input type="text" name="CO" required><br><br>
+        SO2: <input type="text" name="SO2" required><br><br>
+        O3: <input type="text" name="O3" required><br><br>
+        <input type="submit" value="Predict Air Quality">
+    </form>
+
+    {% if prediction_text %}
+    <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
